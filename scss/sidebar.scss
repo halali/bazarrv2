@@ -18,6 +18,7 @@ Main sidebar
     z-index: 20;
     padding-top: 70px;
     background: $sidebar;
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
 }
 
 .fix-sidebar .left-sidebar{
@@ -152,7 +153,7 @@ sidebar navigation
 
 .sidebar-nav {
     background: $sidebar;
-    padding: 0px;
+    padding: 15px;
     > ul{
         padding: 0px 0px 60px;
     }
@@ -163,35 +164,28 @@ sidebar navigation
             list-style: none;
             a {
                 color: $sidebar-text;
-                padding: 8px 35px 8px 40px;
+                padding: 8px 35px 8px 15px;
                 display: block;
-                font-size: 14px;
-                //border-radius: $radius;
+                font-size: 15px;
+                border-radius: $radius;
                 white-space: nowrap;
-                i {
-                color: $white;
-                font-size: 14px;
-                }
                 &.active,
                 &:hover {
-                    color: $topbar;
+                    color: $themecolor-alt;
                 }
                 &.active {
                     font-weight: 500;
                     color: $dark;
-                    border-left: 3px solid $topbar;
                 }
             }
             ul {
-                padding-left: 60px;
+                padding-left: 5px;
                 padding-top: 10px;
-                transition-delay: inherit;
-                border-left: 3px solid $topbar;
                 li a {
-                    padding: 15px 35px 10px 15px;
+                    padding: 10px 35px 10px 15px;
                 }
                 ul {
-                    padding-left: 35px;
+                    padding-left: 15px;
 
                 }
             }
@@ -213,13 +207,11 @@ sidebar navigation
     > ul > li {
         margin-bottom: 10px;
         &.active > a {
-            color: $topbar;
+            color: $white;
             font-weight: 500;
-            border-left: 3px solid $topbar;
-            background: $themecolor-alt;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             i {
-                color: $topbar;
-                font-size: 14px;
+                color: $themecolor-alt;
             }
         }
     }
@@ -229,7 +221,7 @@ sidebar navigation
         &:hover {
 
             i {
-                color: $topbar;
+                color: $themecolor-alt;
             }
         }
         i {
@@ -248,7 +240,7 @@ sidebar navigation
         &.active {
             font-weight: 400;
             background:#242933;
-            color: $topbar;
+            color: $themecolor-alt;
         }
     }
 }
@@ -295,6 +287,92 @@ sidebar navigation
 When click on sidebar toggler and also for tablet
 *****************/
 
+@media(min-width:768px) {
+    .mini-sidebar .sidebar-nav #sidebarnav li {
+        position: relative;
+    }
+    .mini-sidebar .sidebar-nav #sidebarnav > li > ul {
+        position: absolute;
+        left: 60px;
+        top: 45px;
+        width: 200px;
+        z-index: 1001;
+        background: $sidebar-alt;
+        display: none;
+        padding-left: 1px;
+    }
+    .mini-sidebar .sidebar-nav {
+        padding: 5px;
+    }
+    .mini-sidebar.fix-sidebar .left-sidebar{
+        position:absolute;
+    }
+    .mini-sidebar .sidebar-nav #sidebarnav > li:hover > ul {
+        height: auto !important;
+
+        overflow: auto;
+    }
+    .mini-sidebar .sidebar-nav #sidebarnav > li:hover > ul,
+    .mini-sidebar .sidebar-nav #sidebarnav > li:hover > ul.collapse {
+        display: block;
+    }
+    .mini-sidebar .sidebar-nav #sidebarnav > li > a.has-arrow:after {
+        display: none;
+    }
+    .mini-sidebar {
+        .left-sidebar {
+            width: 60px;
+        }
+        .user-profile {
+            padding-bottom: 15px;
+            width: 60px;
+            margin-bottom: 7px;
+            .profile-img{
+                padding: 15px 0 0 0;
+                margin: 0px 0 0 6px;
+                &:before{
+                    top:15px;
+                }
+            }
+        }
+        .scroll-sidebar{
+            padding-bottom: 0px;
+            position: absolute;
+        }
+        .hide-menu,
+        .nav-small-cap,
+        .sidebar-footer,
+        .user-profile .profile-text {
+            display: none;
+        }
+        .nav-devider{
+            width: 50px;
+            }
+        .sidebar-nav{ background: transparent;}
+        .sidebar-nav #sidebarnav > li > a{
+            padding: 9px 15px;
+            width: 50px;
+        }
+        .sidebar-nav #sidebarnav > li:hover > a {
+            width: 260px;
+            background: $themecolor-alt;
+            color: $white;
+            border-color: $themecolor;
+            i {
+                color: $white;
+            }
+            .hide-menu {
+                display: inline;
+            }
+        }
+        .sidebar-nav #sidebarnav > li.active > a{
+            border-color:transparent;
+            &.active{
+                border-color:$themecolor;
+            }
+        }
+    }
+}
 @media(max-width:767px) {
     .mini-sidebar{
         .left-sidebar{position: fixed;}

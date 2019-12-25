@@ -5,27 +5,27 @@ Email: niravjoshi87@gmail.com
 File: scss
 */
 // Variables
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
 
-$bodyfont:'Roboto', 'open sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-$headingfont:'Roboto', 'open sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$bodyfont:'Poppins', sans-serif;
+$headingfont:'Poppins', sans-serif;
 
 
 /*Theme Colors*/
 
-$topbar: #16d7d7;
-$sidebar: #3a3f51;
+$topbar: #2196f3;
+$sidebar: #fff;
 $sidebar-white: #e5edef;
-$sidebar-alt: #6e788e;
-$bodycolor: #fff;
+$sidebar-alt:#f2f6f8;
+$bodycolor: #eef5f9;
 $headingtext: #455a64;
 $bodytext: #67757c; 
-$sidebar-text: #fff;
-$sidebar-icons: #fff ;
+$sidebar-text: #607d8b;
+$sidebar-icons: #99abb4 ;
 
 $light-text: #a6b7bf;
-$themecolor: #16d7d7;
-$themecolor-alt: #252833;
+$themecolor: #009efb;
+$themecolor-alt: #26c6da;
 $themecolor-dark: #028ee1;
 
 /*bootstrap Color*/
