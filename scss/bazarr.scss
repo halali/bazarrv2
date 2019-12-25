@@ -5,12 +5,12 @@ Email: niravjoshi87@gmail.com
 File: scss
 */
 
+@import 'variable';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700');
 
 $bodyfont: 'Roboto', 'open sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 $headingfont: 'Roboto', 'open sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
-@import 'variable';
 $themecolor: #3a3f51;
 $themecolor-dark: #252833;
 $topbar: #800080;
